@@ -22,9 +22,8 @@ def ask_question(question, option1, option2):
 
 def save_result(name, mbti_type):
     # Pastikan folder ada
-    os.makedirs("Project", exist_ok=True)
-
-    filename = "Project-AI-/Data.json"
+    # os.makedirs("Project", exist_ok=True)
+    filename = "Data.json"
     result = {
         "nama": name,
         "mbti": mbti_type,
