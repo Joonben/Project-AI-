@@ -64,7 +64,6 @@ def main():
 
     print("\nSilakan jawab beberapa pertanyaan berikut untuk menentukan MBTI Anda.\n")
 
-    # Skor dimensi
     EI = SN = TF = JP = 0
 
     # Pertanyaan EI
