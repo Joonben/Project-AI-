@@ -1,0 +1,1 @@
+tentukan_profil
