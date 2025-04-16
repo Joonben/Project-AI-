@@ -3,14 +3,14 @@ import json
 def tentukan_profil(mata_kuliah):
     # Hitung skor untuk setiap profil
     skor = {
-        "AI": 0,  # Artificial Intelligence
+        "ISD": 0,  # Artificial Intelligence
         "UI": 0,   # UI/UX
-        "IN": 0,   # Infrastruktur
+        "NSS": 0,   # Infrastruktur
         "DB": 0,   # Database
     }
 
     # Rule untuk Artificial Intelligence
-    ai_mk = [
+    isd_mk = [
         "Internet of Things",
         "Machine Learning",
         "Jaringan Syaraf Tiruan",
@@ -22,7 +22,7 @@ def tentukan_profil(mata_kuliah):
         "Deep Learning"
     ]
 
-    skor["AI"] = sum(mata_kuliah.get(mk, 0) for mk in ai_mk) / len(ai_mk) if ai_mk else 0
+    skor["ISD"] = sum(mata_kuliah.get(mk, 0) for mk in isd_mk) / len(isd_mk) if isd_mk else 0
 
     # Rule untuk UI/UX
     ui_mk = [
@@ -36,7 +36,7 @@ def tentukan_profil(mata_kuliah):
     skor["UI"] = sum(mata_kuliah.get(mk, 0) for mk in ui_mk) / len(ui_mk) if ui_mk else 0
 
     # Rule untuk Infrastruktur Jaringan
-    in_mk = [
+    nss_mk = [
         "Cloud Infrastructure",
         "Enterprise Network",
         "Pengantar Keamanan Jaringan",
@@ -46,7 +46,7 @@ def tentukan_profil(mata_kuliah):
         "Keamanan Jaringan",
         "Internet of Things"
     ]
-    skor["IN"] = sum(mata_kuliah.get(mk, 0) for mk in in_mk) / len(in_mk) if in_mk else 0
+    skor["NSS"] = sum(mata_kuliah.get(mk, 0) for mk in nss_mk) / len(nss_mk) if in_mk else 0
 
     # Rule untuk Database
     db_mk = [
