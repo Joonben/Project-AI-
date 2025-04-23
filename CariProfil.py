@@ -46,7 +46,7 @@ def tentukan_profil(mata_kuliah):
         "Keamanan Jaringan",
         "Internet of Things"
     ]
-    skor["NSS"] = sum(mata_kuliah.get(mk, 0) for mk in nss_mk) / len(nss_mk) if in_mk else 0
+    skor["NSS"] = sum(mata_kuliah.get(mk, 0) for mk in nss_mk) / len(nss_mk) if nss_mk else 0
 
     # Rule untuk Database
     db_mk = [
@@ -55,8 +55,6 @@ def tentukan_profil(mata_kuliah):
         "Basis Data Terdistribusi",
         "Keamanan Basis Data",
         "Administrasi Basis Data Non Relasional",
-        "Sistem Basis Data",
-        "Praktikum Sistem Basis Data"
     ]
     skor["DB"] = sum(mata_kuliah.get(mk, 0) for mk in db_mk) / len(db_mk) if db_mk else 0
 

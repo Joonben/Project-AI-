@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 
-MBTI_TYPES = {
+MBTI_TYPES = { 
     "INTJ", "INTP", "ENTJ", "ENTP",
     "INFJ", "INFP", "ENFJ", "ENFP",
     "ISTJ", "ISFJ", "ESTJ", "ESFJ",

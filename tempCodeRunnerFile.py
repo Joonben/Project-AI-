@@ -1,1 +1,1 @@
-tentukan_profil
+e
