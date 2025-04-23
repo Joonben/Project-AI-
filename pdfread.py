@@ -7,12 +7,13 @@ import json
 from datetime import datetime
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+from krs_parser import parse_krs
 
 # ==== CONFIGURATION ====
 class Config:
-    INPUT_PDF = "Project-AI-/daftarnilai71210793.pdf"
-    OUTPUT_JSON = "Project-AI-/hasil_nilai_mahasiswa.json"
-    OUTPUT_PDF = "Project-AI-/output_json_printed.pdf"
+    INPUT_PDF = "daftarnilai71210793.pdf"
+    OUTPUT_JSON = "hasil_nilai_mahasiswa.json"
+    OUTPUT_PDF = "output_json_printed.pdf"
     MBTI_TYPE = "INFP"
     GRADUATE_PROFILE = "IN"
 
@@ -34,7 +35,6 @@ def extract_transcript_data(pdf_path):
             text = page.extract_text()
             if not text:
                 continue
-
             # Ekstrak informasi mahasiswa
             nim_match = re.search(r"No\. Mahasiswa\s*:\s*(\d+)", text)
             if nim_match:
@@ -62,18 +62,13 @@ def extract_transcript_data(pdf_path):
                 data["ipk"] = float(ipk_match.group(1))
 
             # Ekstrak mata kuliah dari tabel
-            course_pattern = re.compile(r"\b(\d+)\s+[A-Z]+\d+\s+(.+?)\s+(\d+)\s+([A-E][+-]?)\b")
-            for match in course_pattern.finditer(text):
-                no = match.group(1)
-                nama = match.group(2).strip()
-                sks = int(match.group(3))
-                nilai = match.group(4).strip()
-
+            matkuls = parse_krs(text)
+            for matkul in matkuls:
                 data["mata_kuliah"].append({
-                    "no": no,
-                    "nama": nama,
-                    "sks": sks,
-                    "nilai": nilai
+                    "no": len(matkul['no']),
+                    "nama": matkul["nama"],
+                    "sks": len(matkul["sks"]),
+                    "nilai": matkul["nilai"]
                 })
 
     return data
