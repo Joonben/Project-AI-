@@ -2,8 +2,6 @@ import pdfplumber
 import re
 import json
 from datetime import datetime
-from reportlab.lib.pagesizes import A4
-from reportlab.pdfgen import canvas
 from krs_parser import parse_krs
 
 # ==== CONFIGURATION ====
