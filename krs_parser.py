@@ -10,7 +10,7 @@ def information_parser(text):
     ]
 
     possible_matkul = {}
-    with open("Matkul.json", "r") as f:
+    with open("Json/Matkul.json", "r") as f:
         possible_matkul = json.load(f)["mata_kuliah"]
 
     splittan = text.split()
@@ -26,6 +26,7 @@ def information_parser(text):
 
     informations = []
     start_index = 0
+
     for i in end_indices:
         information = splittan[start_index:i+1]
         nama = " ".join(splittan[2+start_index:i+1-2])

@@ -1,9 +1,12 @@
 [
     {
-        "nama": "MICHAEL GOLAND Program : INFORMATIKA",
-        "mbti": "INFP",
-        "waktu": "2025-04-23 14:43:09",
-        "mata_kuliah": {
+        "NIM": "71210793",
+        "Nama": "MICHAEL GOLAND",
+        "MBTI": " ",
+        "IPK": 3.53,
+        "Prodi": "INFORMATIKA",
+        "Profil Lulusan": " ",
+        "Nilai Mata Kuliah": {
             "CULTURAL AND HERITAGE TOURISM MBKM": "A",
             "APRESIASI BUDAYA": "A",
             "DIGITAL HUMANITIES": "B-",
@@ -50,7 +53,6 @@
             "KULIAH KERJA NYATA": "A",
             "REKAYASA PERANGKAT LUNAK BERORIENTASI OBYEK": "A-",
             "PRAKT REKAYASA PERANGKAT LUNAK BERORIENTASI": "A"
-        },
-        "profil_lulusan": "IN"
+        }
     }
 ]
