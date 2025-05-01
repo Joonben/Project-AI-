@@ -1,39 +1,12 @@
 [
     {
+        "nama": "python -u \"d:\\Ngampus\\Semester 4\\AI\\Project\\Project-AI-\\TestMBTI.py\"",
+        "mbti": "ESTJ",
+        "waktu": "2025-04-27 00:38:22"
+    },
+    {
         "nama": "Sam",
-        "mbti": "INFP",
-        "waktu": "2025-04-12 15:07:52",
-        "mata_kuliah": {
-            "Teknologi Komputer": 85,
-            "Praktikum Teknologi Komputer": 92,
-            "Matematika Teknik": 77,
-            "Logika Matematika": 90,
-            "Jaringan Komputer": 83,
-            "Praktikum Jaringan Komputer": 95,
-            "Algoritma dan Pemrograman": 91,
-            "Praktikum Algoritma dan Pemrograman": 82,
-            "Arsitektur dan Organisasi Komputer": 94,
-            "Statistik": 80,
-            "Struktur Data": 87,
-            "Praktikum Struktur Data": 98,
-            "Infrastruktur LAN": 96,
-            "Praktikum Infrastruktur LAN": 78,
-            "Sistem Operasi": 84,
-            "Keamanan Komputer": 79,
-            "Internet of Things": 72,
-            "Enterprise Network": 93,
-            "Cloud Infrastructure": 75,
-            "Pengantar Keamanan Jaringan": 99,
-            "Jaringan Nir Kabel": 81,
-            "Otomasi Jaringan": 97,
-            "Teknologi WAN": 89,
-            "Keamanan Jaringan": 70,
-            "Analisis Data Statistik": 76,
-            "Deep Learning": 74,
-            "Pemrograman Berorientasi Layanan": 88,
-            "Sistem Informasi Geografis": 86
-        },
-        "profil_lulusan": "IN"
+        "mbti": "ESTJ",
+        "waktu": "2025-05-01 16:02:11"
     }
 ]
-
