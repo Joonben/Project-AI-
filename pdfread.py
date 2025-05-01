@@ -4,13 +4,8 @@ import json
 from datetime import datetime
 from krs_parser import parse_krs
 
-# ==== CONFIGURATION ====
-class Config:
-    INPUT_PDF = "DaftarNilai/daftarnilai71210793.pdf"
-    OUTPUT_JSON = "Json/hasil_nilai_mahasiswa.json"
-    OUTPUT_PDF = "output_json_printed.pdf"
-    MBTI_TYPE = "INFP"
-    GRADUATE_PROFILE = "IN"
+# class Config:
+#     OUTPUT_JSON = "Json/hasil_nilai_mahasiswa.json"
 
 # ==== PDF EXTRACTION FUNCTION ====
 def extract_transcript_data(pdf_path):
@@ -68,56 +63,5 @@ def extract_transcript_data(pdf_path):
 
     return data
 
-# # ==== PDF CREATION FUNCTION ====
-# def create_pdf_report(data: list, filename: str) -> None:
-#     c = canvas.Canvas(filename, pagesize=A4)
-#     text_obj = c.beginText(40, 800)
-#     text_obj.setFont("Courier", 9)
-
-#     json_str = json.dumps(data, indent=4, ensure_ascii=False)
-
-#     for line in json_str.splitlines():
-#         if text_obj.getY() < 40:
-#             c.drawText(text_obj)
-#             c.showPage()
-#             text_obj = c.beginText(40, 800)
-#             text_obj.setFont("Courier", 9)
-#         text_obj.textLine(line)
-
-#     c.drawText(text_obj)
-#     c.save()
-
-# ==== MAIN ====
-# def main():
-#     try:
-#         # Step 1: Extract from PDF
-#         transcript_data = extract_transcript_data(Config.INPUT_PDF)
-
-#         # Step 2: Format for JSON output
-#         output_data = [{
-#             "nama": transcript_data["nama"] or "Unknown",
-#             "mbti": Config.MBTI_TYPE,
-#             "waktu": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-#             "mata_kuliah": {
-#                 mk["nama"]: mk["nilai"]
-#                 for mk in transcript_data["mata_kuliah"]
-#             },
-#             "profil_lulusan": Config.GRADUATE_PROFILE
-#         }]
-
-#         # Step 3: Save to JSON
-#         with open(Config.OUTPUT_JSON, "w", encoding="utf-8") as f:
-#             json.dump(output_data, f, indent=4, ensure_ascii=False)
-
-#         # Step 4: Generate PDF output
-#         create_pdf_report(output_data, Config.OUTPUT_PDF)
-
-#         print(f"✅ Berhasil! File JSON disimpan di '{Config.OUTPUT_JSON}' dan PDF di '{Config.OUTPUT_PDF}'.")
-
-#     except Exception as e:
-#         print(f"❌ Terjadi kesalahan: {str(e)}")
-
-# if __name__ == "__main__":
-#     main()
 
  

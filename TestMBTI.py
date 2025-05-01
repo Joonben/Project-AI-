@@ -45,7 +45,45 @@ def save_result(name, mbti_type):
 
     print("\n💾 Data Anda berhasil disimpan (overwrite jika ada).")
 
+def mbti_test():
+    tahu_mbti = input("Apakah Anda sudah mengetahui tipe MBTI Anda? (y/n): ").strip().lower()
+
+    if tahu_mbti == "y":
+        while True:
+            mbti = input("Masukkan tipe MBTI Anda (contoh: INFP, ESTJ): ").strip().upper()
+            if mbti in MBTI_TYPES:
+                break
+            print("❌ Tipe MBTI tidak valid. Coba lagi.")
+        return mbti
+    EI = SN = TF = JP = 0
+
+    # Pertanyaan EI
+    EI += 1 if ask_question("Saya mendapatkan energi dari:", "Berinteraksi dengan banyak orang", "Menyendiri dan refleksi pribadi") == 'A' else -1
+    EI += 1 if ask_question("Saya lebih suka:", "Diskusi kelompok", "Menulis dan merenung sendiri") == 'A' else -1
+
+    # Pertanyaan SN
+    SN += 1 if ask_question("Saya lebih percaya pada:", "Pengalaman nyata dan fakta", "Ide dan kemungkinan masa depan") == 'B' else -1
+    SN += 1 if ask_question("Saya memproses informasi dengan:", "Langsung dan praktis", "Intuitif dan konseptual") == 'B' else -1
+
+    # Pertanyaan TF
+    TF += 1 if ask_question("Saya mengambil keputusan berdasarkan:", "Perasaan dan hubungan", "Logika dan analisis") == 'A' else -1
+    TF += 1 if ask_question("Yang penting bagi saya:", "Keadilan dan logika", "Empati dan kasih sayang") == 'B' else -1
+
+    # Pertanyaan JP
+    JP += 1 if ask_question("Saya lebih suka gaya hidup yang:", "Terjadwal dan teratur", "Fleksibel dan spontan") == 'B' else -1
+    JP += 1 if ask_question("Saya nyaman dengan:", "Keputusan yang sudah dibuat", "Pilihan yang masih terbuka") == 'B' else -1
+
+    mbti = ("E" if EI > 0 else "I") + \
+           ("N" if SN > 0 else "S") + \
+           ("F" if TF > 0 else "T") + \
+           ("P" if JP > 0 else "J")
+
+    print(f"\n🧠 Tipe Kepribadian Anda berdasarkan tes ini adalah: {mbti}")
+    return mbti
+
+
 def main():
+    
     print("=== Tes Kepribadian MBTI Sederhana ===")
     name = input("Masukkan nama Anda: ").strip()
 
@@ -81,7 +119,7 @@ def main():
     JP += 1 if ask_question("Saya lebih suka gaya hidup yang:", "Terjadwal dan teratur", "Fleksibel dan spontan") == 'B' else -1
     JP += 1 if ask_question("Saya nyaman dengan:", "Keputusan yang sudah dibuat", "Pilihan yang masih terbuka") == 'B' else -1
 
-    # Menentukan MBTI
+    # Menentukan MBTI 
     mbti = ("E" if EI > 0 else "I") + \
            ("N" if SN > 0 else "S") + \
            ("F" if TF > 0 else "T") + \
@@ -89,6 +127,3 @@ def main():
 
     print(f"\n🧠 Tipe Kepribadian Anda berdasarkan tes ini adalah: {mbti}")
     save_result(name, mbti)
-
-if __name__ == "__main__":
-    main()
