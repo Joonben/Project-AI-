@@ -2,6 +2,7 @@ import json
 
 def konversi_nilai_huruf(nilai_huruf):
     """Mengkonversi nilai huruf menjadi nilai numerik"""
+
     konversi = {
         'A': 85,
         'A-': 80,
@@ -14,6 +15,12 @@ def konversi_nilai_huruf(nilai_huruf):
         'E': 40
     }
     return konversi.get(nilai_huruf, 0)
+
+def plus(nilai):
+    if nilai % 10 >= 5:
+        return 0.5
+    else:
+        return 0
 
 def hitung_skor_profil(mata_kuliah, daftar_mk):
     total = 0
