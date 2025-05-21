@@ -1,6 +1,7 @@
-from pdfread import *
-from TestMBTI import *
-from CariProfil import *
+from Tools.pdfread import *
+from Tools.TestMBTI import *
+from Tools.CariProfil import *
+from Tools.SkillsFinder import *
 
 def main():
     print("hai selamat datang")
@@ -20,6 +21,10 @@ def main():
             "Nilai Mata Kuliah": {
                 mk["nama"]: mk["nilai"]
                 for mk in transcript_data["mata_kuliah"]
+            },
+            "Skill": {
+                "Hard Skill": [],
+                "Soft Skill": []
             }
         }
 
@@ -27,16 +32,18 @@ def main():
         profil = tentukan_profil(mata_kuliah)
         output_data["Profil Lulusan"] = profil
         output_data["MBTI"] = mbti_test()
+        hard_skills = tentukan_hard_skill(mata_kuliah)
+        # soft_skills = tentukan_soft_skill(mbti)
+        output_data["Skill"]["Hard Skill"] = hard_skills
+        # output_data["Skill"]["Soft Skill"] = soft_skills
 
         with open("Json/hasil_nilai_mahasiswa.json", "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=4, ensure_ascii=False)
         
-        
-
-        print(f"✅ Berhasil! File JSON disimpan di Json/hasil_nilai_mahasiswa.json")
+        print(f"File JSON disimpan di Json/hasil_nilai_mahasiswa.json")
 
     except Exception as e:
-        print(f"❌ Terjadi kesalahan: {str(e)}")
+        print(f"Terjadi kesalahan: {str(e)}")
 
 if __name__ == "__main__":
     main()

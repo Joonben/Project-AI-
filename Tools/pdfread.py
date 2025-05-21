@@ -2,7 +2,7 @@ import pdfplumber
 import re
 import json
 from datetime import datetime
-from krs_parser import parse_krs
+from Tools.krs_parser import parse_krs
 
 # class Config:
 #     OUTPUT_JSON = "Json/hasil_nilai_mahasiswa.json"
