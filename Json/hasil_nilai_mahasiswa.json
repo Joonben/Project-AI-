@@ -1,7 +1,7 @@
 {
     "NIM": "71231050",
     "Nama": "SAMUEL NATANAEL",
-    "MBTI": "ENTP",
+    "MBTI": "INFP",
     "IPK": 3.56,
     "Prodi": "INFORMATIKA",
     "Profil Lulusan": "General IT",
@@ -56,10 +56,9 @@
             "Wireshark"
         ],
         "Soft Skill": [
-            "Critical Thinking",
+            "Adaptability",
             "Curiosity & Willingness to Learn",
-            "Persistence & Resilience",
-            "Problem Solving"
+            "Team Collaboration"
         ]
     }
 }
