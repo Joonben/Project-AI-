@@ -1,0 +1,72 @@
+{
+  "Bidang": {
+    "Artificial Intelligence": [
+      "Machine Learning Engineer",
+      "Data Scientist",
+      "AI Researcher",
+      "Computer Vision Engineer",
+      "NLP Engineer",
+      "AI Product Manager",
+      "Robotics Engineer",
+      "AI Solutions Architect",
+      "Deep Learning Specialist",
+      "AI Ethics Consultant",
+      "AI Hardware Engineer",
+      "Conversational AI Designer",
+      "Autonomous Systems Developer",
+      "AI Trainer (Data Annotation)",
+      "Cognitive Computing Specialist"
+    ],
+    "UI/UX": [
+      "UI Designer",
+      "UX Designer",
+      "UX Researcher",
+      "Interaction Designer",
+      "Product Designer",
+      "Design System Specialist",
+      "UX Writer",
+      "Service Designer",
+      "Information Architect",
+      "Visual Designer",
+      "Accessibility Specialist",
+      "Motion UI Designer",
+      "AR/VR Interface Designer",
+      "Design Thinking Coach",
+      "UX Metrics Analyst"
+    ],
+    "Infrastruktur Jaringan": [
+      "Network Engineer",
+      "System Administrator",
+      "DevOps Engineer",
+      "Cloud Infrastructure Engineer",
+      "Cybersecurity Analyst",
+      "Network Security Engineer",
+      "Site Reliability Engineer (SRE)",
+      "Network Architect",
+      "Data Center Specialist",
+      "5G Network Engineer",
+      "SDN (Software Defined Networking) Engineer",
+      "VoIP Engineer",
+      "Network Automation Specialist",
+      "Wireless Communication Engineer",
+      "IoT Infrastructure Specialist"
+    ],
+    "Database": [
+      "Database Administrator (DBA)",
+      "Data Engineer",
+      "Database Developer",
+      "ETL Developer",
+      "Big Data Engineer",
+      "Data Analyst",
+      "Data Architect",
+      "Data Warehouse Specialist",
+      "Business Intelligence Developer",
+      "Database Security Analyst",
+      "NoSQL Database Expert",
+      "Data Governance Specialist",
+      "Database Performance Tuning Expert",
+      "Data Migration Specialist",
+      "Time-Series Database Specialist"
+    ]
+  }
+}

@@ -18,7 +18,7 @@ def tentukan_soft_skill(mbti):
         with open("Json/MBTI.json", "r", encoding="utf-8") as f:
             mapping = json.load(f).get("mbti", {})
     except (FileNotFoundError, json.JSONDecodeError):
-        print("❌ Gagal membuka atau membaca file MBTI.json")
+        print("Gagal membuka atau membaca file MBTI.json")
         return []
 
     soft_skills = mapping.get(mbti.upper(), [])

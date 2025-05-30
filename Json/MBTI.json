@@ -1,20 +1,156 @@
 {
   "mbti": {
-    "INTJ": ["Analytical Thinking", "Attention to Detail", "Critical Thinking", "Persistence & Resilience", "Strategic Thinking", "Risk Assessment", "Time Management"],
-    "INTP": ["Analytical Thinking", "Critical Thinking", "Curiosity & Willingness to Learn", "Problem Solving"],
-    "ENTJ": ["Decision Making", "Strategic Thinking", "Initiative and Proactive Attitude", "Work Under Pressure", "Persistence & Resilience"],
-    "ENTP": ["Curiosity & Willingness to Learn", "Problem Solving", "Critical Thinking", "Persistence & Resilience"],
-    "INFJ": ["Ethical Responsibility", "Strategic Thinking", "Team Collaboration", "Persistence & Resilience"],
-    "INFP": ["Adaptability", "Curiosity & Willingness to Learn", "Team Collaboration"],
-    "ENFJ": ["Communication Skills", "Ethical Responsibility", "Team Collaboration"],
-    "ENFP": ["Communication Skills", "Initiative and Proactive Attitude", "Curiosity & Willingness to Learn"],
-    "ISTJ": ["Attention to Detail", "Time Management", "Risk Assessment", "Documentation & Reporting Skills"],
-    "ISFJ": ["Team Collaboration", "Attention to Detail", "Ethical Responsibility"],
-    "ESTJ": ["Decision Making", "Time Management", "Work Under Pressure"],
-    "ESFJ": ["Communication Skills", "Team Collaboration"],
-    "ISTP": ["Problem Solving", "Work Under Pressure"],
-    "ISFP": ["Adaptability"],
-    "ESTP": ["Initiative and Proactive Attitude", "Work Under Pressure"],
-    "ESFP": ["Adaptability", "Communication Skills"]
+    "INTJ": [
+      "Analytical Thinking",
+      "Attention to Detail",
+      "Critical Thinking",
+      "Persistence & Resilience",
+      "Strategic Thinking",
+      "Risk Assessment",
+      "Time Management",
+      "Problem Solving",
+      "Decision Making",
+      "Initiative and Proactive Attitude"
+    ],
+    "INTP": [
+      "Analytical Thinking",
+      "Critical Thinking",
+      "Curiosity & Willingness to Learn",
+      "Problem Solving",
+      "Adaptability",
+      "Strategic Thinking"
+    ],
+    "ENTJ": [
+      "Decision Making",
+      "Strategic Thinking",
+      "Initiative and Proactive Attitude",
+      "Work Under Pressure",
+      "Persistence & Resilience",
+      "Communication Skills",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Time Management"
+    ],
+    "ENTP": [
+      "Curiosity & Willingness to Learn",
+      "Problem Solving",
+      "Critical Thinking",
+      "Persistence & Resilience",
+      "Adaptability",
+      "Communication Skills",
+      "Strategic Thinking",
+      "Initiative and Proactive Attitude"
+    ],
+    "INFJ": [
+      "Ethical Responsibility",
+      "Strategic Thinking",
+      "Team Collaboration",
+      "Persistence & Resilience",
+      "Communication Skills",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "INFP": [
+      "Adaptability",
+      "Curiosity & Willingness to Learn",
+      "Team Collaboration",
+      "Ethical Responsibility",
+      "Problem Solving",
+      "Communication Skills",
+      "Attention to Detail"
+    ],
+    "ENFJ": [
+      "Communication Skills",
+      "Ethical Responsibility",
+      "Team Collaboration",
+      "Initiative and Proactive Attitude",
+      "Problem Solving",
+      "Strategic Thinking",
+      "Decision Making",
+      "Adaptability"
+    ],
+    "ENFP": [
+      "Communication Skills",
+      "Initiative and Proactive Attitude",
+      "Curiosity & Willingness to Learn",
+      "Adaptability",
+      "Problem Solving",
+      "Team Collaboration",
+      "Strategic Thinking"
+    ],
+    "ISTJ": [
+      "Attention to Detail",
+      "Time Management",
+      "Risk Assessment",
+      "Documentation & Reporting Skills",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Persistence & Resilience",
+      "Ethical Responsibility"
+    ],
+    "ISFJ": [
+      "Team Collaboration",
+      "Attention to Detail",
+      "Ethical Responsibility",
+      "Problem Solving",
+      "Time Management",
+      "Persistence & Resilience",
+      "Documentation & Reporting Skills"
+    ],
+    "ESTJ": [
+      "Decision Making",
+      "Time Management",
+      "Work Under Pressure",
+      "Problem Solving",
+      "Initiative and Proactive Attitude",
+      "Communication Skills",
+      "Risk Assessment",
+      "Documentation & Reporting Skills"
+    ],
+    "ESFJ": [
+      "Communication Skills",
+      "Team Collaboration",
+      "Ethical Responsibility",
+      "Attention to Detail",
+      "Problem Solving",
+      "Time Management",
+      "Adaptability"
+    ],
+    "ISTP": [
+      "Problem Solving",
+      "Work Under Pressure",
+      "Analytical Thinking",
+      "Critical Thinking",
+      "Adaptability",
+      "Attention to Detail",
+      "Time Management"
+    ],
+    "ISFP": [
+      "Adaptability",
+      "Curiosity & Willingness to Learn",
+      "Attention to Detail",
+      "Team Collaboration",
+      "Problem Solving",
+      "Ethical Responsibility"
+    ],
+    "ESTP": [
+      "Initiative and Proactive Attitude",
+      "Work Under Pressure",
+      "Problem Solving",
+      "Adaptability",
+      "Decision Making",
+      "Communication Skills",
+      "Risk Assessment"
+    ],
+    "ESFP": [
+      "Adaptability",
+      "Communication Skills",
+      "Team Collaboration",
+      "Initiative and Proactive Attitude",
+      "Problem Solving",
+      "Work Under Pressure",
+      "Curiosity & Willingness to Learn"
+    ]
   }
 }

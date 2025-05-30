@@ -1,180 +1,1238 @@
-[
+{
+  "job_data": [
     {
-        "nama": "Machine Learning Engineer",
-        "mbti": "INTJ",
-        "kategori": "Artificial Intelligence",
-        "skills": [
+      "profil": "Artificial Intelligence",
+      "roles": [
+        {
+          "role_name": "Machine Learning Engineer",
+          "hard_skills": [
+            "Python",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-Learn",
+            "Pandas",
+            "NumPy",
+            "SQL",
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Docker",
+            "CI/CD",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Data Analysis",
+            "Data Visualization",
+            "Matplotlib",
+            "Seaborn",
+            "RESTful API",
+            "Linux"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Attention to Detail",
+            "Critical Thinking",
+            "Team Collaboration",
+            "Adaptability",
+            "Curiosity & Willingness to Learn",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Data Scientist",
+          "hard_skills": [
+            "Python",
+            "SQL",
+            "Data Analysis",
+            "Data Visualization",
+            "Tableau",
+            "Matplotlib",
+            "Seaborn",
+            "Machine Learning",
+            "Scikit-Learn",
+            "Pandas",
+            "NumPy",
+            "TensorFlow",
+            "PyTorch",
+            "Git"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Problem Solving",
+            "Critical Thinking",
+            "Communication Skills",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "AI Researcher",
+          "hard_skills": [
+            "Python",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "C/C++",
+            "Git"
+          ],
+          "soft_skills": [
+            "Critical Thinking",
+            "Analytical Thinking",
+            "Problem Solving",
+            "Curiosity & Willingness to Learn",
+            "Persistence & Resilience",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Computer Vision Engineer",
+          "hard_skills": [
+            "Python",
+            "C/C++",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas",
+            "Data Visualization",
+            "Matplotlib",
+            "Linux",
+            "Git"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Team Collaboration"
+          ]
+        },
+        {
+          "role_name": "NLP Engineer",
+          "hard_skills": [
+            "Python",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas",
+            "SQL",
+            "RESTful API",
+            "Git"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Attention to Detail",
+            "Critical Thinking",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "AI Product Manager",
+          "hard_skills": [
+            "Agile/Scrum Methodology",
+            "Data Analysis",
+            "Machine Learning",
+            "Data Visualization",
+            "SQL"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Strategic Thinking",
+            "Decision Making",
+            "Team Collaboration",
+            "Adaptability",
+            "Risk Assessment",
+            "Initiative and Proactive Attitude"
+          ]
+        },
+        {
+          "role_name": "Robotics Engineer",
+          "hard_skills": [
+            "C/C++",
+            "Python",
+            "Linux",
+            "Ubuntu",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "Git",
+            "Troubleshooting"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Team Collaboration",
+            "Analytical Thinking",
+            "Persistence & Resilience"
+          ]
+        },
+        {
+          "role_name": "AI Solutions Architect",
+          "hard_skills": [
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Machine Learning",
+            "Data Analysis",
+            "Network Infrastructure Design",
+            "DevOps Fundamentals",
+            "CI/CD",
+            "Docker",
+            "SQL",
+            "Python",
+            "RESTful API"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Strategic Thinking",
+            "Problem Solving",
+            "Decision Making",
+            "Risk Assessment",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Deep Learning Specialist",
+          "hard_skills": [
             "Python",
             "TensorFlow",
             "PyTorch",
-            "Scikit-learn",
-            "Deep Learning",
-            "Data Preprocessing",
-            "Model Evaluation",
-            "Statistics"
-        ]
-    },
-    {
-        "nama": "AI Research Scientist",
-        "mbti": "INTP",
-        "kategori": "Artificial Intelligence",
-        "skills": [
-            "Machine Learning Theory",
-            "Natural Language Processing",
+            "Machine Learning",
+            "NumPy",
+            "Pandas",
+            "C/C++",
+            "Git",
+            "Linux"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn",
+            "Persistence & Resilience"
+          ]
+        },
+        {
+          "role_name": "AI Ethics Consultant",
+          "hard_skills": [
+            "Machine Learning",
+            "Data Analysis",
+            "Information Security"
+          ],
+          "soft_skills": [
+            "Ethical Responsibility",
+            "Critical Thinking",
+            "Communication Skills",
+            "Analytical Thinking",
+            "Risk Assessment",
+            "Decision Making",
+            "Adaptability"
+          ]
+        },
+        {
+          "role_name": "AI Hardware Engineer",
+          "hard_skills": [
+            "C/C++",
+            "Linux",
+            "Machine Learning"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Team Collaboration"
+          ]
+        },
+        {
+          "role_name": "Conversational AI Designer",
+          "hard_skills": [
+            "Machine Learning",
             "Python",
-            "Reinforcement Learning",
-            "Computer Vision",
-            "Scientific Writing"
-        ]
+            "Data Analysis"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Attention to Detail",
+            "Problem Solving",
+            "Adaptability",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Autonomous Systems Developer",
+          "hard_skills": [
+            "C/C++",
+            "Python",
+            "Linux",
+            "Ubuntu",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "Git",
+            "Docker",
+            "CI/CD",
+            "Troubleshooting"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Critical Thinking",
+            "Team Collaboration",
+            "Persistence & Resilience"
+          ]
+        },
+        {
+          "role_name": "AI Trainer (Data Annotation)",
+          "hard_skills": [
+            "Data Analysis"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Persistence & Resilience",
+            "Adaptability",
+            "Communication Skills"
+          ]
+        },
+        {
+          "role_name": "Cognitive Computing Specialist",
+          "hard_skills": [
+            "Python",
+            "Machine Learning",
+            "TensorFlow",
+            "PyTorch",
+            "NumPy",
+            "Pandas",
+            "Data Analysis",
+            "SQL"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Curiosity & Willingness to Learn",
+            "Strategic Thinking",
+            "Persistence & Resilience"
+          ]
+        }
+      ]
     },
     {
-        "nama": "Software Engineer",
-        "mbti": "ISTJ",
-        "kategori": "Programming and Software Development",
-        "skills": [
-            "Java",
-            "C++",
-            "Software Design Patterns",
-            "Version Control (Git)",
-            "Agile Development",
-            "REST APIs",
-            "Unit Testing"
-        ]
-    },
-    {
-        "nama": "Full Stack Developer",
-        "mbti": "ENTP",
-        "kategori": "Programming and Software Development",
-        "skills": [
+      "profil": "UI/UX",
+      "roles": [
+        {
+          "role_name": "UI Designer",
+          "hard_skills": [
+            "HTML",
+            "CSS",
+            "Data Visualization"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Communication Skills",
+            "Adaptability",
+            "Problem Solving",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "UX Designer",
+          "hard_skills": [
+            "Data Analysis",
+            "Data Visualization"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Communication Skills",
+            "Team Collaboration",
+            "Adaptability",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "UX Researcher",
+          "hard_skills": [
+            "Data Analysis",
+            "Data Visualization",
+            "Tableau",
+            "Matplotlib",
+            "Seaborn"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Communication Skills",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn",
+            "Problem Solving",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Interaction Designer",
+          "hard_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Critical Thinking",
+            "Adaptability",
+            "Team Collaboration",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Product Designer",
+          "hard_skills": [
+            "Data Analysis",
+            "Data Visualization",
+            "Agile/Scrum Methodology",
+            "HTML",
+            "CSS"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Communication Skills",
+            "Strategic Thinking",
+            "Decision Making",
+            "Team Collaboration",
+            "Attention to Detail",
+            "Adaptability"
+          ]
+        },
+        {
+          "role_name": "Design System Specialist",
+          "hard_skills": [
+            "HTML",
+            "CSS",
             "JavaScript",
             "React.js",
-            "Node.js",
-            "MongoDB",
-            "Express.js",
-            "HTML/CSS",
-            "DevOps"
-        ]
-    },
-    {
-        "nama": "Database Administrator",
-        "mbti": "ISTP",
-        "kategori": "Database Management System",
-        "skills": [
+            "Vue.js",
+            "Git"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Documentation & Reporting Skills",
+            "Communication Skills",
+            "Team Collaboration",
+            "Problem Solving"
+          ]
+        },
+        {
+          "role_name": "UX Writer",
+          "hard_skills": [
+             "Data Analysis"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Attention to Detail",
+            "Adaptability",
+            "Problem Solving",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Service Designer",
+          "hard_skills": [
+            "Data Analysis",
+            "Data Visualization"
+          ],
+          "soft_skills": [
+            "Strategic Thinking",
+            "Problem Solving",
+            "Communication Skills",
+            "Analytical Thinking",
+            "Team Collaboration",
+            "Adaptability"
+          ]
+        },
+        {
+          "role_name": "Information Architect",
+          "hard_skills": [
+            "Data Analysis",
+            "SQL"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Attention to Detail",
+            "Problem Solving",
+            "Strategic Thinking",
+            "Communication Skills",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Visual Designer",
+          "hard_skills": [
+            "Data Visualization",
+            "Matplotlib",
+            "Seaborn",
+            "Tableau"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Communication Skills",
+            "Adaptability",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Accessibility Specialist",
+          "hard_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Ethical Responsibility",
+            "Communication Skills",
+            "Problem Solving",
+            "Analytical Thinking",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Motion UI Designer",
+          "hard_skills": [
+            "CSS",
+            "JavaScript"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Problem Solving",
+            "Adaptability",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "AR/VR Interface Designer",
+          "hard_skills": [
+            "Python",
+            "C/C++"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Adaptability",
+            "Curiosity & Willingness to Learn",
+            "Critical Thinking",
+            "Attention to Detail"
+          ]
+        },
+        {
+          "role_name": "Design Thinking Coach",
+          "hard_skills": [
+            "Agile/Scrum Methodology"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Team Collaboration",
+            "Problem Solving",
+            "Strategic Thinking",
+            "Adaptability",
+            "Initiative and Proactive Attitude"
+          ]
+        },
+        {
+          "role_name": "UX Metrics Analyst",
+          "hard_skills": [
+            "Data Analysis",
+            "Data Visualization",
             "SQL",
-            "Oracle DB",
-            "MySQL",
-            "Database Security",
-            "Backup and Recovery",
-            "Database Optimization"
-            
-        ]
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Tableau",
+            "Matplotlib"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Attention to Detail",
+            "Communication Skills",
+            "Problem Solving",
+            "Documentation & Reporting Skills"
+          ]
+        }
+      ]
     },
     {
-        "nama": "Data Engineer",
-        "mbti": "INTJ",
-        "kategori": "Database Management System",
-        "skills": [
-            "ETL Pipelines",
-            "Big Data Tools (Hadoop, Spark)",
-            "SQL/NoSQL Databases",
-            "Cloud Storage (AWS, GCP)",
-            "Data Modeling"
-        ]
-    },
-    {
-        "nama": "Network Engineer",
-        "mbti": "ESTJ",
-        "kategori": "Network and Infrastructure",
-        "skills": [
+      "profil": "Infrastruktur Jaringan",
+      "roles": [
+        {
+          "role_name": "Network Engineer",
+          "hard_skills": [
+            "Cisco Networking",
+            "LAN/WAN",
+            "Routing and Switching",
+            "TCP/IP",
+            "DNS",
+            "DHCP",
+            "Firewalls",
+            "VPN Configuration",
+            "Network Monitoring Tools",
+            "Troubleshooting",
+            "Linux",
+            "Python",
             "Network Configuration",
-            "Cisco Routing & Switching",
-            "Firewalls and VPN",
-            "LAN/WAN Design",
+            "Network Infrastructure Design",
+            "Network Security",
+            "CCNA",
+            "CCNP"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Attention to Detail",
+            "Critical Thinking",
+            "Work Under Pressure",
+            "Documentation & Reporting Skills",
+            "Time Management"
+          ]
+        },
+        {
+          "role_name": "System Administrator",
+          "hard_skills": [
+            "Linux",
+            "Windows Server",
+            "Network Administration",
+            "Troubleshooting",
+            "Python",
+            "TCP/IP",
+            "DNS",
+            "DHCP",
+            "Firewalls",
+            "Security Auditing",
+            "Ubuntu"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Time Management",
+            "Work Under Pressure",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "DevOps Engineer",
+          "hard_skills": [
+            "Linux",
+            "Docker",
+            "CI/CD",
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Python",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "DevOps Fundamentals",
+            "Network Monitoring Tools",
+            "Troubleshooting",
+            "RESTful API",
+            "Agile/Scrum Methodology"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Team Collaboration",
+            "Adaptability",
+            "Communication Skills",
+            "Initiative and Proactive Attitude",
+            "Work Under Pressure"
+          ]
+        },
+        {
+          "role_name": "Cloud Infrastructure Engineer",
+          "hard_skills": [
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Linux",
+            "Docker",
+            "CI/CD",
+            "Network Infrastructure Design",
+            "Python",
+            "Network Security",
+            "Troubleshooting",
+            "TCP/IP",
+            "DNS",
+            "Firewalls",
+            "VPN Configuration"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Adaptability",
+            "Risk Assessment",
+            "Communication Skills",
+            "Analytical Thinking",
+            "Time Management"
+          ]
+        },
+        {
+          "role_name": "Cybersecurity Analyst",
+          "hard_skills": [
+            "Cybersecurity Fundamentals",
+            "Network Security",
+            "Firewalls",
+            "IDS/IPS",
+            "SIEM",
+            "Vulnerability Assessment",
+            "Incident Response",
+            "Malware Analysis",
+            "Ethical Hacking",
+            "Penetration Testing",
+            "Linux Security",
+            "Wireshark",
+            "Snort",
+            "Suricata",
+            "OWASP Top 10",
+            "Threat Hunting",
+            "Kali"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Attention to Detail",
+            "Problem Solving",
+            "Ethical Responsibility",
+            "Documentation & Reporting Skills",
+            "Work Under Pressure"
+          ]
+        },
+        {
+          "role_name": "Network Security Engineer",
+          "hard_skills": [
+            "Network Security",
+            "Firewalls",
+            "IDS/IPS",
+            "VPN Configuration",
+            "Routing and Switching",
+            "TCP/IP",
+            "Cisco Networking",
+            "Cryptography",
+            "Penetration Testing",
+            "Vulnerability Assessment",
+            "Linux Security",
+            "Secure Coding Practices",
+            "Security Auditing",
+            "CCNA",
+            "CCNP"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Problem Solving",
+            "Attention to Detail",
+            "Risk Assessment",
+            "Critical Thinking",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Site Reliability Engineer (SRE)",
+          "hard_skills": [
+            "Linux",
+            "Python",
+            "Go",
+            "Docker",
+            "CI/CD",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Network Monitoring Tools",
+            "Troubleshooting",
+            "Data Analysis",
+            "DevOps Fundamentals",
+            "Git"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Work Under Pressure",
+            "Analytical Thinking",
+            "Team Collaboration",
+            "Persistence & Resilience",
+            "Attention to Detail",
+            "Initiative and Proactive Attitude"
+          ]
+        },
+        {
+          "role_name": "Network Architect",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "LAN/WAN",
+            "Routing and Switching",
+            "TCP/IP",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Network Security",
+            "Firewalls",
+            "Python",
+            "Cisco Networking",
+            "CCNP"
+          ],
+          "soft_skills": [
+            "Strategic Thinking",
+            "Decision Making",
+            "Communication Skills",
+            "Analytical Thinking",
+            "Risk Assessment",
+            "Problem Solving",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Data Center Specialist",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "LAN/WAN",
+            "Troubleshooting",
+            "Linux",
+            "Windows Server",
+            "Network Configuration"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Work Under Pressure",
+            "Time Management",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "5G Network Engineer",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "TCP/IP",
+            "Linux",
+            "Python",
+            "Routing and Switching",
             "Network Monitoring Tools"
-        ]
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Curiosity & Willingness to Learn",
+            "Adaptability",
+            "Critical Thinking"
+          ]
+        },
+        {
+          "role_name": "SDN (Software Defined Networking) Engineer",
+          "hard_skills": [
+            "Python",
+            "Network Infrastructure Design",
+            "TCP/IP",
+            "Linux",
+            "RESTful API",
+            "Network Monitoring Tools"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Adaptability",
+            "Critical Thinking",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "VoIP Engineer",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "TCP/IP",
+            "Routing and Switching",
+            "Troubleshooting",
+            "Network Monitoring Tools",
+            "Cisco Networking"
+          ],
+          "soft_skills": [
+            "Troubleshooting",
+            "Problem Solving",
+            "Attention to Detail",
+            "Communication Skills"
+          ]
+        },
+        {
+          "role_name": "Network Automation Specialist",
+          "hard_skills": [
+            "Python",
+            "Go",
+            "Git",
+            "CI/CD",
+            "Linux",
+            "Network Infrastructure Design",
+            "RESTful API",
+            "Docker"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Initiative and Proactive Attitude",
+            "Adaptability",
+            "Attention to Detail"
+          ]
+        },
+        {
+          "role_name": "Wireless Communication Engineer",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "TCP/IP",
+            "Routing and Switching",
+            "Network Monitoring Tools",
+            "Troubleshooting"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Troubleshooting",
+            "Analytical Thinking",
+            "Attention to Detail"
+          ]
+        },
+        {
+          "role_name": "IoT Infrastructure Specialist",
+          "hard_skills": [
+            "Network Infrastructure Design",
+            "TCP/IP",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Python",
+            "Network Security",
+            "RESTful API",
+            "Linux"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Adaptability",
+            "Risk Assessment",
+            "Analytical Thinking",
+            "Curiosity & Willingness to Learn"
+          ]
+        }
+      ]
     },
     {
-        "nama": "Cloud Infrastructure Engineer",
-        "mbti": "ENTJ",
-        "kategori": "Network and Infrastructure",
-        "skills": [
-            "AWS / Azure",
-            "Virtualization (VMware)",
-            "Containerization (Docker, Kubernetes)",
-            "CI/CD Pipelines",
-            "Cloud Security"
-        ]
-    },
-{
-  "Bidang": {
-    "Artificial Intelligence": [
-      "Machine Learning Engineer",
-      "Data Scientist",
-      "AI Researcher",
-      "Computer Vision Engineer",
-      "NLP Engineer",
-      "AI Product Manager",
-      "Robotics Engineer",
-      "AI Solutions Architect",
-      "Deep Learning Specialist",
-      "AI Ethics Consultant",
-      "AI Hardware Engineer",
-      "Conversational AI Designer",
-      "Autonomous Systems Developer",
-      "AI Trainer (Data Annotation)",
-      "Cognitive Computing Specialist"
-    ],
-    "UI/UX": [
-      "UI Designer",
-      "UX Designer",
-      "UX Researcher",
-      "Interaction Designer",
-      "Product Designer",
-      "Design System Specialist",
-      "UX Writer",
-      "Service Designer",
-      "Information Architect",
-      "Visual Designer",
-      "Accessibility Specialist",
-      "Motion UI Designer",
-      "AR/VR Interface Designer",
-      "Design Thinking Coach",
-      "UX Metrics Analyst"
-    ],
-    "Infrastruktur Jaringan": [
-      "Network Engineer",
-      "System Administrator",
-      "DevOps Engineer",
-      "Cloud Infrastructure Engineer",
-      "Cybersecurity Analyst",
-      "Network Security Engineer",
-      "Site Reliability Engineer (SRE)",
-      "Network Architect",
-      "Data Center Specialist",
-      "5G Network Engineer",
-      "SDN (Software Defined Networking) Engineer",
-      "VoIP Engineer",
-      "Network Automation Specialist",
-      "Wireless Communication Engineer",
-      "IoT Infrastructure Specialist"
-    ],
-    "Database": [
-      "Database Administrator (DBA)",
-      "Data Engineer",
-      "Database Developer",
-      "ETL Developer",
-      "Big Data Engineer",
-      "Data Analyst",
-      "Data Architect",
-      "Data Warehouse Specialist",
-      "Business Intelligence Developer",
-      "Database Security Analyst",
-      "NoSQL Database Expert",
-      "Data Governance Specialist",
-      "Database Performance Tuning Expert",
-      "Data Migration Specialist",
-      "Time-Series Database Specialist"
-    ]
-  }
+      "profil": "Database",
+      "roles": [
+        {
+          "role_name": "Database Administrator (DBA)",
+          "hard_skills": [
+            "SQL",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Linux",
+            "Windows Server",
+            "Troubleshooting",
+            "Security Auditing",
+            "Data Encryption",
+            "Network Monitoring Tools"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Problem Solving",
+            "Work Under Pressure",
+            "Documentation & Reporting Skills",
+            "Time Management",
+            "Analytical Thinking"
+          ]
+        },
+        {
+          "role_name": "Data Engineer",
+          "hard_skills": [
+            "Python",
+            "SQL",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Docker",
+            "CI/CD",
+            "Data Analysis",
+            "Pandas",
+            "NumPy",
+            "RESTful API",
+            "Git"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Team Collaboration",
+            "Attention to Detail",
+            "Adaptability",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Database Developer",
+          "hard_skills": [
+            "SQL",
+            "MySQL",
+            "PostgreSQL",
+            "Python",
+            "Java",
+            "C/C++",
+            "RESTful API",
+            "Git"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Analytical Thinking",
+            "Team Collaboration",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "ETL Developer",
+          "hard_skills": [
+            "SQL",
+            "Python",
+            "Data Analysis",
+            "Pandas",
+            "MySQL",
+            "PostgreSQL"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Analytical Thinking",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Big Data Engineer",
+          "hard_skills": [
+            "Python",
+            "SQL",
+            "Java",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "Data Analysis",
+            "Pandas",
+            "NumPy",
+            "Docker",
+            "CI/CD"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Adaptability",
+            "Team Collaboration",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Data Analyst",
+          "hard_skills": [
+            "SQL",
+            "Python",
+            "Data Analysis",
+            "Data Visualization",
+            "Tableau",
+            "Matplotlib",
+            "Seaborn",
+            "Pandas",
+            "NumPy"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Critical Thinking",
+            "Communication Skills",
+            "Attention to Detail",
+            "Problem Solving",
+            "Curiosity & Willingness to Learn",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Data Architect",
+          "hard_skills": [
+            "SQL",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Network Infrastructure Design"
+          ],
+          "soft_skills": [
+            "Strategic Thinking",
+            "Decision Making",
+            "Communication Skills",
+            "Analytical Thinking",
+            "Problem Solving",
+            "Risk Assessment",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "Data Warehouse Specialist",
+          "hard_skills": [
+            "SQL",
+            "Python",
+            "Data Analysis",
+            "MySQL",
+            "PostgreSQL"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Problem Solving",
+            "Attention to Detail",
+            "Documentation & Reporting Skills",
+            "Strategic Thinking"
+          ]
+        },
+        {
+          "role_name": "Business Intelligence Developer",
+          "hard_skills": [
+            "SQL",
+            "Data Visualization",
+            "Tableau",
+            "Data Analysis",
+            "Python"
+          ],
+          "soft_skills": [
+            "Communication Skills",
+            "Analytical Thinking",
+            "Problem Solving",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn"
+          ]
+        },
+        {
+          "role_name": "Database Security Analyst",
+          "hard_skills": [
+            "SQL",
+            "Cybersecurity Fundamentals",
+            "Data Encryption",
+            "Vulnerability Assessment",
+            "Security Auditing",
+            "Network Security",
+            "Linux Security",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB"
+          ],
+          "soft_skills": [
+            "Attention to Detail",
+            "Analytical Thinking",
+            "Ethical Responsibility",
+            "Risk Assessment",
+            "Problem Solving",
+            "Critical Thinking",
+            "Documentation & Reporting Skills"
+          ]
+        },
+        {
+          "role_name": "NoSQL Database Expert",
+          "hard_skills": [
+            "MongoDB",
+            "Python",
+            "Data Analysis",
+            "AWS",
+            "Google Cloud",
+            "Microsoft Azure"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Adaptability",
+            "Analytical Thinking",
+            "Curiosity & Willingness to Learn",
+            "Attention to Detail"
+          ]
+        },
+        {
+          "role_name": "Data Governance Specialist",
+          "hard_skills": [
+            "Data Analysis",
+            "SQL",
+            "Python"
+          ],
+          "soft_skills": [
+            "Ethical Responsibility",
+            "Communication Skills",
+            "Attention to Detail",
+            "Documentation & Reporting Skills",
+            "Analytical Thinking",
+            "Strategic Thinking",
+            "Risk Assessment"
+          ]
+        },
+        {
+          "role_name": "Database Performance Tuning Expert",
+          "hard_skills": [
+            "SQL",
+            "MySQL",
+            "PostgreSQL",
+            "Network Monitoring Tools",
+            "Troubleshooting",
+            "Data Analysis"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Problem Solving",
+            "Attention to Detail",
+            "Persistence & Resilience",
+            "Critical Thinking"
+          ]
+        },
+        {
+          "role_name": "Data Migration Specialist",
+          "hard_skills": [
+            "SQL",
+            "Python",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Data Analysis"
+          ],
+          "soft_skills": [
+            "Problem Solving",
+            "Attention to Detail",
+            "Risk Assessment",
+            "Documentation & Reporting Skills",
+            "Time Management",
+            "Adaptability"
+          ]
+        },
+        {
+          "role_name": "Time-Series Database Specialist",
+          "hard_skills": [
+            "SQL",
+            "Python",
+            "Data Analysis",
+            "Network Monitoring Tools",
+            "AWS",
+            "Google Cloud"
+          ],
+          "soft_skills": [
+            "Analytical Thinking",
+            "Problem Solving",
+            "Attention to Detail",
+            "Curiosity & Willingness to Learn",
+            "Adaptability"
+          ]
+        }
+      ]
+    }
+  ]
 }
-]

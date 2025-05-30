@@ -42,7 +42,7 @@ def tentukan_profil(mata_kuliah):
     """Menentukan profil berdasarkan nilai mata kuliah"""
     # Daftar mata kuliah untuk setiap profil
     profil_mk = {
-        "ISD": [  # Artificial Intelligence
+        "Artificial Intelligence": [  # Artificial Intelligence
             "Internet of Things",
             "Machine Learning",
             "Jaringan Syaraf Tiruan",
@@ -53,7 +53,7 @@ def tentukan_profil(mata_kuliah):
             "Game Engine",
             "Deep Learning"
         ],
-        "UI": [  # UI/UX
+        "UI/UX": [  # UI/UX
             "Pola Desain Antarmuka Pengguna",
             "Desain Eksperimental",
             "Desain dan Evaluasi Antarmuka",
@@ -61,7 +61,7 @@ def tentukan_profil(mata_kuliah):
             "Test Engineering",
             "Visualisasi Data"
         ],
-        "NSS": [  # Infrastruktur Jaringan
+        "Infrastruktur Jaringan": [  # Infrastruktur Jaringan
             "Cloud Infrastructure",
             "Cloud Infrastructure MBKM",
             "Enterprise Network",
@@ -73,7 +73,7 @@ def tentukan_profil(mata_kuliah):
             "Keamanan Jaringan",
             "Internet of Things"
         ],
-        "DB": [  # Database
+        "Database": [  # Database
             "Administrasi Basis Data",
             "Data Warehouse",
             "Basis Data Terdistribusi",

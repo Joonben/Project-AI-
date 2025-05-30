@@ -1,0 +1,108 @@
+[
+    {
+        "nama": "Machine Learning Engineer",
+        "mbti": "INTJ",
+        "kategori": "Artificial Intelligence",
+        "skills": [
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-learn",
+            "Deep Learning",
+            "Data Preprocessing",
+            "Model Evaluation",
+            "Statistics"
+        ]
+    },
+    {
+        "nama": "AI Research Scientist",
+        "mbti": "INTP",
+        "kategori": "Artificial Intelligence",
+        "skills": [
+            "Machine Learning Theory",
+            "Natural Language Processing",
+            "Python",
+            "Reinforcement Learning",
+            "Computer Vision",
+            "Scientific Writing"
+        ]
+    },
+    {
+        "nama": "Software Engineer",
+        "mbti": "ISTJ",
+        "kategori": "Programming and Software Development",
+        "skills": [
+            "Java",
+            "C++",
+            "Software Design Patterns",
+            "Version Control (Git)",
+            "Agile Development",
+            "REST APIs",
+            "Unit Testing"
+        ]
+    },
+    {
+        "nama": "Full Stack Developer",
+        "mbti": "ENTP",
+        "kategori": "Programming and Software Development",
+        "skills": [
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "HTML/CSS",
+            "DevOps"
+        ]
+    },
+    {
+        "nama": "Database Administrator",
+        "mbti": "ISTP",
+        "kategori": "Database Management System",
+        "skills": [
+            "SQL",
+            "Oracle DB",
+            "MySQL",
+            "Database Security",
+            "Backup and Recovery",
+            "Database Optimization"
+            
+        ]
+    },
+    {
+        "nama": "Data Engineer",
+        "mbti": "INTJ",
+        "kategori": "Database Management System",
+        "skills": [
+            "ETL Pipelines",
+            "Big Data Tools (Hadoop, Spark)",
+            "SQL/NoSQL Databases",
+            "Cloud Storage (AWS, GCP)",
+            "Data Modeling"
+        ]
+    },
+    {
+        "nama": "Network Engineer",
+        "mbti": "ESTJ",
+        "kategori": "Network and Infrastructure",
+        "skills": [
+            "Network Configuration",
+            "Cisco Routing & Switching",
+            "Firewalls and VPN",
+            "LAN/WAN Design",
+            "Network Monitoring Tools"
+        ]
+    },
+    {
+        "nama": "Cloud Infrastructure Engineer",
+        "mbti": "ENTJ",
+        "kategori": "Network and Infrastructure",
+        "skills": [
+            "AWS / Azure",
+            "Virtualization (VMware)",
+            "Containerization (Docker, Kubernetes)",
+            "CI/CD Pipelines",
+            "Cloud Security"
+        ]
+    }
+]

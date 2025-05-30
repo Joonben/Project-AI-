@@ -7,28 +7,47 @@ def update_skills():
         print("❗ File hasil analisis belum tersedia. Jalankan analisis terlebih dahulu.")
         return
 
-    with open("Json/hasil_nilai_mahasiswa.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
+    nim = input("Masukkan NIM Anda untuk mengedit data: ").strip()
 
-    # Cetak data utama
-    for key in data:
-        if key == "Nilai Mata Kuliah":
-            print("\n📘 Nilai Mata Kuliah:")
-            for nama_mk, nilai in data[key].items():
-                print(f"  - {nama_mk}: {nilai}")
-        elif key == "Skill":
-            print("\n💼 Hard Skills:")
-            for idx, skill in enumerate(data[key]["Hard Skill"], 1):
-                print(f"  {idx}. {skill}")
+    # Load seluruh data mahasiswa
+    with open(path, "r", encoding="utf-8") as f:
+        try:
+            semua_data = json.load(f)
+            if not isinstance(semua_data, list):
+                print("❗ Format data tidak valid.")
+                return
+        except json.JSONDecodeError:
+            print("❗ File JSON rusak atau kosong.")
+            return
 
-            print("\n🤝 Soft Skills:")
-            for idx, skill in enumerate(data[key]["Soft Skill"], 1):
-                print(f"  {idx}. {skill}")
-        else:
-            print(f"{key}: {data[key]}")
+    # Cari mahasiswa dengan NIM yang sesuai
+    indeks = None
+    for i, mahasiswa in enumerate(semua_data):
+        if mahasiswa.get("NIM") == nim:
+            indeks = i
+            break
 
-    print("🛠️  Perbarui Data Skill")
-    print("1. Edit Hard Skill")
+    if indeks is None:
+        print(f"❗ Data dengan NIM {nim} tidak ditemukan.")
+        return
+
+    data = semua_data[indeks]
+
+    # Tampilkan data
+    print(f"\n📄 Data Mahasiswa NIM: {nim}")
+    print(f"Nama : {data['Nama']}")
+    print(f"IPK  : {data['IPK']}")
+    print("\n💼 Hard Skills:")
+    for idx, skill in enumerate(data["Skill"]["Hard Skill"], 1):
+        print(f"  {idx}. {skill}")
+
+    print("\n🤝 Soft Skills:")
+    for idx, skill in enumerate(data["Skill"]["Soft Skill"], 1):
+        print(f"  {idx}. {skill}")
+
+    # Menu update
+    print("\n🛠️  Perbarui Data Skill")
+    print("1. Tambah Hard Skill")
     print("2. Tambah Soft Skill")
     print("3. Selesai")
 
@@ -36,12 +55,12 @@ def update_skills():
         choice = input("Masukkan pilihan (1/2/3): ").strip()
         if choice == "1":
             new_skill = input("Masukkan hard skill baru: ").strip()
-            if new_skill:
+            if new_skill and new_skill not in data["Skill"]["Hard Skill"]:
                 data["Skill"]["Hard Skill"].append(new_skill)
                 print("✅ Hard skill ditambahkan.")
         elif choice == "2":
             new_skill = input("Masukkan soft skill baru: ").strip()
-            if new_skill:
+            if new_skill and new_skill not in data["Skill"]["Soft Skill"]:
                 data["Skill"]["Soft Skill"].append(new_skill)
                 print("✅ Soft skill ditambahkan.")
         elif choice == "3":
@@ -49,4 +68,11 @@ def update_skills():
         else:
             print("❗ Pilihan tidak valid.")
 
-    simpan_data(data)
+    # Simpan kembali ke semua_data dan file
+    semua_data[indeks] = data
+    simpan_data(semua_data)
+
+def simpan_data(data, path="Json/hasil_nilai_mahasiswa.json"):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+    print("💾 Data berhasil disimpan ke file.")
