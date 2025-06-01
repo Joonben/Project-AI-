@@ -1,6 +1,6 @@
 import json
 
-def load_job_data(file_path="Json/job.json"):
+def load_JobData(file_path="Json/job.json"):
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file)
@@ -24,10 +24,10 @@ def get_bidang_keywords():
 
 def forward_chaining_rekomendasi(user_skills):
     user_skills = set(skill.lower() for skill in user_skills)
-    job_data = load_job_data()
+    JobData = load_JobData()
 
     bidang_keywords = get_bidang_keywords()
-    bidang_to_jobs = job_data.get("Bidang", {})
+    bidang_to_jobs = JobData.get("Bidang", {})
 
     hasil = {}
     for bidang, keywords in bidang_keywords.items():

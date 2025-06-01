@@ -2,14 +2,14 @@ import json
 
 def tentukan_job(mbti, user_skills, user_soft_skills=None, filepath='Json/JobData.json'):
     # Muat data dari JSON
-    data = load_job_data(filepath)
+    data = load_JobData(filepath)
 
     # Pastikan kunci job_data ada
-    job_data = data.get("job_data", [])
-    if not job_data:
-        raise ValueError("Kunci 'job_data' tidak ditemukan di dalam file JSON!")
+    JobData = data.get("JobData", [])
+    if not JobData:
+        raise ValueError("Kunci 'JobData' tidak ditemukan di dalam file JSON!")
 
-    for profile in job_data:
+    for profile in JobData:
         for role in profile.get("roles", []):
             hard_skills = role.get("hard_skills", [])
             soft_skills = role.get("soft_skills", [])
