@@ -150,8 +150,8 @@ def run_analysis():
         output_data["Skill"]["Soft Skill"] = tentukan_soft_skill(output_data["MBTI"])
 
         # Load data pekerjaan dari file JSON
-        job_data = load_job_data()
-        if not job_data or "Bidang" not in job_data:
+        JobData = load_JobData()
+        if not JobData or "Bidang" not in JobData:
             print("❗ Data pekerjaan tidak valid atau 'Bidang' tidak ditemukan.")
             return
 
@@ -162,7 +162,7 @@ def run_analysis():
         lowest_match_score = float("inf")
 
         # Periksa kecocokan pekerjaan
-        for bidang, roles in job_data["Bidang"].items():
+        for bidang, roles in JobData["Bidang"].items():
             for role in roles:
                 hard_skills = output_data["Skill"]["Hard Skill"]
                 soft_skills = output_data["Skill"]["Soft Skill"]
