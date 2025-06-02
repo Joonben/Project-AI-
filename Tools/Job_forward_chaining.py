@@ -11,17 +11,6 @@ def load_JobData(file_path="Json/job.json"):
         print(f"❗ Kesalahan format JSON di file {file_path}: {e}")
         return None
 
-
-
-def get_bidang_keywords():
-    # Contoh sederhana, kamu bisa sesuaikan kata kunci tiap bidang
-    return {
-        "Artificial Intelligence": {"python", "machine learning", "tensorflow", "pytorch", "data analysis"},
-        "UI/UX": {"design", "user experience", "interaction", "ux", "ui", "visual"},
-        "Infrastruktur Jaringan": {"network", "security", "cloud", "devops", "administrator"},
-        "Database": {"sql", "database", "etl", "big data", "data warehouse", "nosql"}
-    }
-
 def forward_chaining_rekomendasi(user_skills):
     user_skills = set(skill.lower() for skill in user_skills)
     JobData = load_JobData()

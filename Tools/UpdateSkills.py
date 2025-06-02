@@ -1,13 +1,11 @@
 import os
 import json
 
-def update_skills():
+def update_skills(nim):
     path = "Json/hasil_nilai_mahasiswa.json"
     if not os.path.exists(path):
         print("❗ File hasil analisis belum tersedia. Jalankan analisis terlebih dahulu.")
         return
-
-    nim = input("Masukkan NIM Anda untuk mengedit data: ").strip()
 
     # Load seluruh data mahasiswa
     with open(path, "r", encoding="utf-8") as f:

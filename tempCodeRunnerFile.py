@@ -1,1 +1,1 @@
-simpan_data
+tampilkan_data_nim
