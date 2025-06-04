@@ -4,7 +4,6 @@ from Tools.CariProfil import *
 from Tools.SkillsFinder import *
 from Tools.UpdateSkills import *
 from Tools.JobFinder import *
-from Tools.Job_forward_chaining import *
 
 import json
 import os
@@ -20,9 +19,54 @@ def tampilkan_hasil(data):
     print(f"IPK            : {data['IPK']}")
     print(f"MBTI           : {data['MBTI']}")
     print(f"Profil Lulusan : {data['Profil Lulusan']}")
-    print("Hard Skills    : " + ", ".join(data["Skill"]["Hard Skill"]))
-    print("Soft Skills    : " + ", ".join(data["Skill"]["Soft Skill"]))
-    print("==============================================\n")
+    print("=" * 80)
+
+    hard_skills = data["Skill"]["Hard Skill"]
+    soft_skills = data["Skill"]["Soft Skill"]
+
+    max_len = max(len(hard_skills), len(soft_skills))
+    hard_skills += [""] * (max_len - len(hard_skills))
+    soft_skills += [""] * (max_len - len(soft_skills))
+
+    print(f"{'Hard Skills':<40} | {'Soft Skills'}")
+    print("-" * 80)
+    for h, s in zip(hard_skills, soft_skills):
+        print(f"{h:<40} | {s}")
+    print("=" * 80 + "\n")
+
+# def tampilkan_hasil(data):
+#     # Header
+#     print(f"\n╔════════════════════════════════════════════════════════════════════════════╗")
+#     print(f"║{'':^70}║")
+#     print(f"║{'HASIL ANALISIS MAHASISWA':^70}║")
+#     print(f"║{data['Nama'].upper():^70}║")
+#     print(f"║{'':^70}║")
+#     print(f"╠════════════════════════════════════════════════════════════════════════════╣")
+    
+#     # Informasi dasar
+#     print(f"║ {'NIM':<15}: {data['NIM']:<54}║")
+#     print(f"║ {'Nama':<15}: {data['Nama']:<54}║")
+#     print(f"║ {'Program Studi':<15}: {data['Prodi']:<54}║")
+#     print(f"║ {'IPK':<15}: {data['IPK']:<54}║")
+#     print(f"║ {'MBTI':<15}: {data['MBTI']:<54}║")
+#     print(f"║ {'Profil Lulusan':<15}: {data['Profil Lulusan']:<54}║")
+#     print(f"╠════════════════════════════════╦═══════════════════════════════════════════╣")
+    
+#     # Skills dalam 2 kolom
+#     hard_skills = data["Skill"]["Hard Skill"]
+#     soft_skills = data["Skill"]["Soft Skill"]
+#     max_lines = max(len(hard_skills), len(soft_skills))
+    
+#     print(f"║ {'HARD SKILLS':^30} ║ {'SOFT SKILLS':^37} ║")
+#     print(f"╠════════════════════════════════╬═══════════════════════════════════════════╣")
+    
+#     for i in range(max_lines):
+#         left = hard_skills[i] if i < len(hard_skills) else ""
+#         right = soft_skills[i] if i < len(soft_skills) else ""
+#         print(f"║ {left:<30} ║ {right:<37} ║")
+    
+#     # Footer
+#     print(f"╚════════════════════════════════╩═══════════════════════════════════════════╝\n")
 
 def tampilkan_semua_data(path="Json/hasil_nilai_mahasiswa.json"):
     if not os.path.exists(path):
@@ -118,7 +162,6 @@ def run_analysis(nim):
             },
             "Job": {
                 "Cocok": None,
-                "Tidak Cocok": None
             }
         }
 
@@ -130,87 +173,9 @@ def run_analysis(nim):
         print("\n🧠 Jawab beberapa pertanyaan untuk menentukan MBTI Anda...")
         output_data["MBTI"] = mbti_test()
 
-        # Tentukan hard skill dan soft skill
         output_data["Skill"]["Hard Skill"] = tentukan_hard_skill(mata_kuliah)
         output_data["Skill"]["Soft Skill"] = tentukan_soft_skill(output_data["MBTI"])
-
-        # Tentukan pekerjaan yang cocok
-
-        # # Load data pekerjaan dari file JSON
-        # JobData = load_JobData()
-        # if not JobData or "Bidang" not in JobData:
-        #     print("❗ Data pekerjaan tidak valid atau 'Bidang' tidak ditemukan.")
-        #     return
-
-        # # Variabel untuk melacak pekerjaan paling cocok dan tidak cocok
-        # best_match = None
-        # best_non_match = None
-        # highest_match_score = -1
-        # lowest_match_score = float("inf")
-
-        # # Periksa kecocokan pekerjaan
-        # for bidang, roles in JobData["Bidang"].items():
-        #     for role in roles:
-        #         hard_skills = output_data["Skill"]["Hard Skill"]
-        #         soft_skills = output_data["Skill"]["Soft Skill"]
-
-        #         matching_hard_skills = [skill for skill in hard_skills if skill in role]
-        #         matching_soft_skills = [skill for skill in soft_skills if skill in role]
-
-        #         hard_skill_match = (len(matching_hard_skills) / len(hard_skills)) * 100 if hard_skills else 0
-        #         soft_skill_match = (len(matching_soft_skills) / len(soft_skills)) * 100 if soft_skills else 0
-
-        #         match_score = hard_skill_match + soft_skill_match
-
-        #         # Cari pekerjaan yang paling cocok
-        #         if match_score > highest_match_score:
-        #             highest_match_score = match_score
-        #             best_match = {
-        #                 "Bidang": bidang,
-        #                 "Role": role,
-        #                 "Hard Skill Match (%)": round(hard_skill_match, 2),
-        #                 "Soft Skill Match (%)": round(soft_skill_match, 2)
-        #             }
-
-        #         # Cari pekerjaan yang paling tidak cocok
-        #         if match_score < lowest_match_score:
-        #             lowest_match_score = match_score
-        #             best_non_match = {
-        #                 "Bidang": bidang,
-        #                 "Role": role,
-        #                 "Hard Skill Match (%)": None,
-        #                 "Soft Skill Match (%)": None
-        #             }
-
-        # # Tentukan pekerjaan yang cocok dan tidak cocok
-        # if best_match:
-        #     output_data["Job"]["Cocok"] = best_match
-        # else:
-        #     print("\n⚠ Tidak ditemukan pekerjaan yang cocok berdasarkan analisis.")
-
-        # if best_non_match:
-        #     output_data["Job"]["Tidak Cocok"] = best_non_match
-
-        # # Tampilkan hasil pekerjaan
-        # if output_data["Job"]["Cocok"]:
-        #     cocok = output_data["Job"]["Cocok"]
-        #     print("\n💼 Pekerjaan yang paling cocok:")
-        #     print(f"  - Bidang: {cocok['Bidang']}")
-        #     print(f"  - Role: {cocok['Role']}")
-        #     print(f"  - Hard Skill Match: {cocok['Hard Skill Match (%)']}%")
-        #     print(f"  - Soft Skill Match: {cocok['Soft Skill Match (%)']}%")
-        # else:
-        #     print("\n⚠ Tidak ada pekerjaan yang cocok berdasarkan analisis.")
-
-        # if output_data["Job"]["Tidak Cocok"]:
-        #     tidak_cocok = output_data["Job"]["Tidak Cocok"]
-        #     print("\n🚫 Pekerjaan yang paling tidak cocok:")
-        #     print(f"  - Bidang: {tidak_cocok['Bidang']}")
-        #     print(f"  - Role: {tidak_cocok['Role']}")
-        #     print(f"  - Hard Skill Match: {tidak_cocok['Hard Skill Match (%)']}")
-        #     print(f"  - Soft Skill Match: {tidak_cocok['Soft Skill Match (%)']}")
-
-        # # Simpan data hasil analisis
+         
         simpan_data(output_data)
 
     except Exception as e:

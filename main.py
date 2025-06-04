@@ -4,7 +4,6 @@ from Tools.CariProfil import *
 from Tools.SkillsFinder import *
 from Tools.UpdateSkills import *
 from Tools.JobFinder import *
-from Tools.Job_forward_chaining import *
 from menu import *
 
 import json
@@ -63,11 +62,14 @@ def main():
         choice = input("Masukkan pilihan Anda (1/2/3/4): ").strip()
 
         if choice == "1":
+            clear_screen()
             tampilkan_data_nim(nim)
         elif choice == "2":
+            clear_screen()
             update_skills(nim)
         elif choice == "3":
-            rekomendasi_pekerjaan_by_nim(nim)
+            clear_screen()
+            rekomendasi_pekerjaan_by_nim_fc(nim)
         elif choice == "4":
             print("👋 Terima kasih telah menggunakan aplikasi ini. Sampai jumpa!")
             break

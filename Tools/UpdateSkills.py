@@ -1,7 +1,9 @@
 import os
 import json
+from menu import *
 
 def update_skills(nim):
+    tampilkan_data_nim(nim)
     path = "Json/hasil_nilai_mahasiswa.json"
     if not os.path.exists(path):
         print("❗ File hasil analisis belum tersedia. Jalankan analisis terlebih dahulu.")
@@ -31,22 +33,10 @@ def update_skills(nim):
 
     data = semua_data[indeks]
 
-    # Tampilkan data
-    print(f"\n📄 Data Mahasiswa NIM: {nim}")
-    print(f"Nama : {data['Nama']}")
-    print(f"IPK  : {data['IPK']}")
-    print("\n💼 Hard Skills:")
-    for idx, skill in enumerate(data["Skill"]["Hard Skill"], 1):
-        print(f"  {idx}. {skill}")
-
-    print("\n🤝 Soft Skills:")
-    for idx, skill in enumerate(data["Skill"]["Soft Skill"], 1):
-        print(f"  {idx}. {skill}")
-
     # Menu update
     print("\n🛠️  Perbarui Data Skill")
-    print("1. Tambah Hard Skill")
-    print("2. Tambah Soft Skill")
+    print("1. Edit Hard Skill")
+    print("2. Edit Soft Skill")
     print("3. Selesai")
 
     while True:

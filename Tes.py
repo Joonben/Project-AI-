@@ -76,7 +76,6 @@ def rekomendasi_pekerjaan_forward_chaining(user_profile_category, user_hard_skil
     
     return derived_recommendations
 
-import json
 
 def rekomendasi_pekerjaan_by_nim_fc(nim, mahasiswa_data_path="Json/hasil_nilai_mahasiswa.json", jobdata_path="Json/JobData.json"):
     try:
@@ -90,11 +89,9 @@ def rekomendasi_pekerjaan_by_nim_fc(nim, mahasiswa_data_path="Json/hasil_nilai_m
         return []
 
     mahasiswa_found = None
-    idx_found = None
-    for idx, m_data in enumerate(semua_data_mahasiswa):
+    for m_data in semua_data_mahasiswa:
         if m_data.get("NIM") == nim:
             mahasiswa_found = m_data
-            idx_found = idx
             break
 
     if not mahasiswa_found:
@@ -103,7 +100,7 @@ def rekomendasi_pekerjaan_by_nim_fc(nim, mahasiswa_data_path="Json/hasil_nilai_m
 
     user_profile = mahasiswa_found.get("Profil Lulusan", "")
     user_hard_skills = []
-    user_soft_skills = []
+    user_soft_skills = [] 
 
     if "Skill" in mahasiswa_found:
         user_hard_skills = mahasiswa_found["Skill"].get("Hard Skill", [])
@@ -112,62 +109,89 @@ def rekomendasi_pekerjaan_by_nim_fc(nim, mahasiswa_data_path="Json/hasil_nilai_m
     if not user_profile:
         print(f"⚠️ Profil lulusan untuk NIM {nim} tidak ditemukan. Tidak dapat memberikan rekomendasi.")
         return []
-
+    
     hasil_rekomendasi = rekomendasi_pekerjaan_forward_chaining(
-        user_profile,
-        user_hard_skills,
-        user_soft_skills if user_soft_skills else None,
+        user_profile, 
+        user_hard_skills, 
+        user_soft_skills if user_soft_skills else None, 
         job_data_filepath=jobdata_path
     )
 
     if not hasil_rekomendasi:
-        print(f"\n⚠️  Tidak ditemukan pekerjaan yang cocok untuk:")
-        print(f"   Nama: {mahasiswa_found.get('Nama', 'Mahasiswa')}")
-        print(f"   NIM: {nim}")
-        print(f"   Profil: '{user_profile}'")
+        print(f"⚠️ Tidak ditemukan pekerjaan yang cocok untuk {mahasiswa_found.get('Nama', 'Mahasiswa')} (NIM {nim}) dengan profil '{user_profile}'.")
     else:
-        print(f"\n✨ {' REKOMENDASI PEKERJAAN ':=^60} ✨")
-        print(f"\n🎓 Profil Kandidat:")
-        print(f"   ├─ Nama: {mahasiswa_found.get('Nama', 'Mahasiswa')}")
-        print(f"   ├─ NIM: {nim}")
-        print(f"   └─ Profil: '{user_profile}'\n")
-
-        print("🔍 Hasil Rekomendasi:\n")
+        print(f"\n💼 Rekomendasi Pekerjaan untuk {mahasiswa_found.get('Nama', 'Mahasiswa')} (NIM {nim}) berdasarkan profil '{user_profile}':\n")
         for i, item in enumerate(hasil_rekomendasi):
-            print(f"🏆 {i+1}. {item['role_name'].upper()}")
-            print(f"   📊 Total Kecocokan: {item['total_match']}%")
-            print(f"   ⚙️  Hard Skill Match: {item['hard_skill_match']}%")
-            print(f"   💬 Soft Skill Match: {item['soft_skill_match']}%")
-
+            print(f"{i+1}. Role: {item['role_name']}")
+            print(f"   Total Match: {item['total_match']}%")
+            print(f"   Hard Skill Match: {item['hard_skill_match']}%")
+            print(f"   Soft Skill Match: {item['soft_skill_match']}%")
+            
             matched_hard = item.get('matched_hard_skills', [])
-            print(f"\n   🔧 Hard Skills yang Cocok:")
-            print(f"      {', '.join(matched_hard) if matched_hard else 'Tidak ada'}")
-
+            print(f"   Matched Hard Skills: {', '.join(matched_hard) if matched_hard else '-'}")
+                
             matched_soft = item.get('matched_soft_skills', [])
-            print(f"\n   🌟 Soft Skills yang Cocok:")
-            print(f"      {', '.join(matched_soft) if matched_soft else 'Tidak ada'}")
-
-            print("\n" + "─" * 60 + "\n")
-
-        # Ambil rekomendasi paling cocok (indeks 0 karena sudah diurutkan)
-        rekom_terbaik = hasil_rekomendasi[0]
-        job_info = {
-            "Cocok": {
-                "Role": rekom_terbaik.get("role_name", "Tidak Diketahui"),
-                "Hard Skill Match (%)": rekom_terbaik.get("hard_skill_match", 0),
-                "Soft Skill Match (%)": rekom_terbaik.get("soft_skill_match", 0)
-            }
-        }
-
-        # Tambahkan ke data mahasiswa
-        semua_data_mahasiswa[idx_found]["Job"] = job_info
-
-        # Simpan kembali ke file
-        try:
-            with open(mahasiswa_data_path, "w", encoding="utf-8") as f:
-                json.dump(semua_data_mahasiswa, f, indent=4, ensure_ascii=False)
-            print(f"✅ Rekomendasi pekerjaan terbaik berhasil disimpan ke dalam data mahasiswa (NIM: {nim}).")
-        except Exception as e:
-            print(f"❗ Gagal menyimpan data rekomendasi ke file: {e}")
+            print(f"   Matched Soft Skills: {', '.join(matched_soft) if matched_soft else '-'}")
+            print()
 
     return hasil_rekomendasi
+
+if __name__ == "__main__":
+    print("--- Contoh Rekomendasi Langsung ---")
+    my_profile = "Artificial Intelligence"
+    my_hard_skills = ["Python", "Machine Learning", "SQL", "AWS", "Docker"]
+    my_soft_skills = ["Problem Solving", "Analytical Thinking", "Team Collaboration", "Curiosity & Willingness to Learn"]
+    
+    recommendations = rekomendasi_pekerjaan_forward_chaining(my_profile, my_hard_skills, my_soft_skills, job_data_filepath="Json/JobData.json")
+    
+    if recommendations:
+        print(f"\nTop Rekomendasi untuk profil '{my_profile}':\n")
+        for i, rec in enumerate(recommendations[:5]): 
+            print(f"{i+1}. {rec['role_name']} - Total Match: {rec['total_match']}%")
+            print(f"   Hard Skills Matched: {', '.join(rec['matched_hard_skills']) if rec['matched_hard_skills'] else '-'}")
+            print(f"   Soft Skills Matched: {', '.join(rec['matched_soft_skills']) if rec['matched_soft_skills'] else '-'}")
+            print("-" * 20)
+    else:
+        print("Tidak ada rekomendasi yang ditemukan.")
+
+    print("\n" + "="*50 + "\n")
+
+    # contoh_mahasiswa_data = [
+    #     {
+    #         "NIM": "12345",
+    #         "Nama": "Budi Santoso",
+    #         "Profil Lulusan": "Artificial Intelligence",
+    #         "Skill": {
+    #             "Hard Skill": ["Python", "TensorFlow", "SQL", "Data Analysis", "Git"],
+    #             "Soft Skill": ["Critical Thinking", "Problem Solving", "Adaptability"]
+    #         }
+    #     },
+    #     {
+    #         "NIM": "67890",
+    #         "Nama": "Citra Lestari",
+    #         "Profil Lulusan": "UI/UX",
+    #         "Skill": {
+    #             "Hard Skill": ["HTML", "CSS", "Data Visualization"],
+    #             "Soft Skill": ["Communication Skills", "Attention to Detail", "Team Collaboration"]
+    #         }
+    #     },
+    #     {
+    #         "NIM": "11223", 
+    #         "Nama": "Eka Putra",
+    #         "Profil Lulusan": "Database",
+    #         "Skill": {
+    #             "Hard Skill": ["SQL", "MySQL", "Troubleshooting", "Python"]
+    #         }
+    #     }
+    # ]
+    # with open("Json/hasil_nilai_mahasiswa.json", "w") as f:
+    #    json.dump(contoh_mahasiswa_data, f, indent=2)
+
+    print("--- Contoh Rekomendasi by NIM ---")
+    rekomendasi_pekerjaan_by_nim_fc("71210683", jobdata_path="Json/JobData.json", mahasiswa_data_path="Json/hasil_nilai_mahasiswa.json")
+    print("\n" + "-"*50 + "\n")
+    rekomendasi_pekerjaan_by_nim_fc("712", jobdata_path="Json/JobData.json", mahasiswa_data_path="Json/hasil_nilai_mahasiswa.json")
+    print("\n" + "-"*50 + "\n")
+    rekomendasi_pekerjaan_by_nim_fc("11223", jobdata_path="Json/JobData.json", mahasiswa_data_path="Json/hasil_nilai_mahasiswa.json") 
+    print("\n" + "-"*50 + "\n")
+    rekomendasi_pekerjaan_by_nim_fc("00000", jobdata_path="Json/JobData.json", mahasiswa_data_path="Json/hasil_nilai_mahasiswa.json")
