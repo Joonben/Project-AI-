@@ -12,7 +12,7 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 def tampilkan_hasil(data):
-    print(f"\n===== HASIL ANALISIS MAHASISWA {data['Nama']} =====")
+    print(f"\n===== HASIL ANALISIS MAHASISWA {data['Nama'].upper()} =====")
     print(f"NIM            : {data['NIM']}")
     print(f"Nama           : {data['Nama']}")
     print(f"Program Studi  : {data['Prodi']}")
@@ -21,52 +21,19 @@ def tampilkan_hasil(data):
     print(f"Profil Lulusan : {data['Profil Lulusan']}")
     print("=" * 80)
 
-    hard_skills = data["Skill"]["Hard Skill"]
-    soft_skills = data["Skill"]["Soft Skill"]
+    hard_skills = data["Skill"].get("Hard Skill", [])
+    soft_skills = data["Skill"].get("Soft Skill", [])
 
     max_len = max(len(hard_skills), len(soft_skills))
     hard_skills += [""] * (max_len - len(hard_skills))
     soft_skills += [""] * (max_len - len(soft_skills))
 
-    print(f"{'Hard Skills':<40} | {'Soft Skills'}")
+    print(f"{'NO.':<5}{'Hard Skills':<40} | {'Soft Skills'}")
     print("-" * 80)
-    for h, s in zip(hard_skills, soft_skills):
-        print(f"{h:<40} | {s}")
+    for i, (h, s) in enumerate(zip(hard_skills, soft_skills), start=1):
+        print(f"{i:<5}{h:<40} | {s}")
     print("=" * 80 + "\n")
 
-# def tampilkan_hasil(data):
-#     # Header
-#     print(f"\n╔════════════════════════════════════════════════════════════════════════════╗")
-#     print(f"║{'':^70}║")
-#     print(f"║{'HASIL ANALISIS MAHASISWA':^70}║")
-#     print(f"║{data['Nama'].upper():^70}║")
-#     print(f"║{'':^70}║")
-#     print(f"╠════════════════════════════════════════════════════════════════════════════╣")
-    
-#     # Informasi dasar
-#     print(f"║ {'NIM':<15}: {data['NIM']:<54}║")
-#     print(f"║ {'Nama':<15}: {data['Nama']:<54}║")
-#     print(f"║ {'Program Studi':<15}: {data['Prodi']:<54}║")
-#     print(f"║ {'IPK':<15}: {data['IPK']:<54}║")
-#     print(f"║ {'MBTI':<15}: {data['MBTI']:<54}║")
-#     print(f"║ {'Profil Lulusan':<15}: {data['Profil Lulusan']:<54}║")
-#     print(f"╠════════════════════════════════╦═══════════════════════════════════════════╣")
-    
-#     # Skills dalam 2 kolom
-#     hard_skills = data["Skill"]["Hard Skill"]
-#     soft_skills = data["Skill"]["Soft Skill"]
-#     max_lines = max(len(hard_skills), len(soft_skills))
-    
-#     print(f"║ {'HARD SKILLS':^30} ║ {'SOFT SKILLS':^37} ║")
-#     print(f"╠════════════════════════════════╬═══════════════════════════════════════════╣")
-    
-#     for i in range(max_lines):
-#         left = hard_skills[i] if i < len(hard_skills) else ""
-#         right = soft_skills[i] if i < len(soft_skills) else ""
-#         print(f"║ {left:<30} ║ {right:<37} ║")
-    
-#     # Footer
-#     print(f"╚════════════════════════════════╩═══════════════════════════════════════════╝\n")
 
 def tampilkan_semua_data(path="Json/hasil_nilai_mahasiswa.json"):
     if not os.path.exists(path):

@@ -77,4 +77,5 @@ def main():
             print("❗ Pilihan tidak valid. Silakan coba lagi.\n")
 
 if __name__ == "__main__":
+    clear_screen()
     main()

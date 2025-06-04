@@ -18,9 +18,10 @@ def tampilkan_skill_table(hard_skills, soft_skills, judul="SKILLS"):
     hard_skills += [""] * (max_len - len(hard_skills))
     soft_skills += [""] * (max_len - len(soft_skills))
     table = list(zip(range(1, max_len + 1), hard_skills, soft_skills))
+    
     headers = ["No", "Hard Skill", "Soft Skill"]
     print(f"\n📋 {judul}")
-    print(tabulate(table, headers=headers, tablefmt="grid"))
+    print(tabulate(table, headers=headers, tablefmt="grid"))    
 
 def update_skills(nim):
     tampilkan_data_nim(nim)
@@ -54,9 +55,11 @@ def update_skills(nim):
         choice = input("Pilihan (1-4): ").strip()
 
         if choice == "1":
+            clear_screen()
             tampilkan_skill_table(data["Skill"]["Hard Skill"], data["Skill"]["Soft Skill"], "SKILL DIMILIKI")
 
         elif choice == "2":
+            clear_screen()
             owned_hard = set(data["Skill"]["Hard Skill"])
             owned_soft = set(data["Skill"]["Soft Skill"])
 
@@ -85,7 +88,8 @@ def update_skills(nim):
                         simpan_skill_master(skill_master)
                 if selected not in owned_hard:
                     data["Skill"]["Hard Skill"].append(selected)
-                    print("✅ Hard skill ditambahkan.")
+                    clear_screen()
+                    print(f"✅ Hard skill {selected} ditambahkan.")
                 else:
                     print("⚠️ Sudah dimiliki.")
             else:
@@ -96,11 +100,13 @@ def update_skills(nim):
                         simpan_skill_master(skill_master)
                 if selected not in owned_soft:
                     data["Skill"]["Soft Skill"].append(selected)
-                    print("✅ Soft skill ditambahkan.")
+                    clear_screen()
+                    print(f"✅ Soft skill {selected} ditambahkan.")
                 else:
                     print("⚠️ Sudah dimiliki.")
 
         elif choice == "3":
+            clear_screen()
             hard = data["Skill"]["Hard Skill"]
             soft = data["Skill"]["Soft Skill"]
 
@@ -122,6 +128,7 @@ def update_skills(nim):
                 continue
 
             removed = daftar.pop(int(no) - 1)
+            clear_screen()
             print(f"🗑️ Skill '{removed}' berhasil dihapus.")
 
         elif choice == "4":
