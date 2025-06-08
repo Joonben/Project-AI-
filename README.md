@@ -97,9 +97,9 @@ Alasan: Cocok dengan skill Python dan minat pada bidang Data
 
 ## 🙋‍♂ Tim Pengembang
 
-* Nama 1 (NIM)
-* Nama 2 (NIM)
-* Nama 3 (NIM)
+* Samuel Natanael
+* Revaldo Hohary
+* Jona Ruben Manalu
 
 ---
 
